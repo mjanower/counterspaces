@@ -14,26 +14,54 @@
     }
     body{
         font-family:myFirstFont;
-        font-size: 4vh;
+        font-size: 3vh;
         line-height: 4.5vh;
+        overflow:hidden;
     }
     img{
-      max-height:130vh;
-      margin-left: 15vw;
+      height:100vh;
+      left: -3rem;
       z-index:-1;
-      position:fixed;
+      position:absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
     }
-    p{
-      max-width: 60vw;
-      margin-top: 90vh;
+    #scroll{
+      margin-left:5%;
+    }
+    #study{
+      position:absolute;
+      bottom: 0rem;
       margin-left: 5%;
       z-index:10;
+    }
+    a{
+      color:white;
+      text-decoration:none;
+    }
+    #side{
+      display:flex;
+      text-wrap:nowrap;
       position:absolute;
+      transform:rotate(90deg);
+      left:18%;
+      bottom:28vh;
+      font-size:2.5vh;
+    }
+    #side p{
+      padding-right:28vh;
     }
 </style>
   </head>
   <body>
-    <img src="counterspace.gif">
-    <p>Counterspace Study—020519</p>
+    <p id="scroll"> SCROLL RIGHT >>
+    <p id="study">Counterspace Study —a</p>
+    <div id="side"><p><a href="http://mikkijanower.work">mikkijanower.work</p><p>020519</p>
+    </div>
+    <div class="image-gallery">
+      <div class="image"><img src="a.gif"></div>
+      <!-- <div class="image"><img src="b.gif"></div>
+      <div class="image"><img src="b.gif"></div> -->
   </body>
   </html>
