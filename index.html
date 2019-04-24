@@ -3,34 +3,37 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" width=devide-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
-
 <style>
     @font-face{
           font-family: myFirstFont;
           src: url(Ogg-Roman.otf);
             }
     html{
-      background:#111111;
+      background:black;
       color: white;
-      overflow:hidden;
     }
     body{
         font-family:myFirstFont;
         font-size: 4vh;
         line-height: 4.5vh;
     }
-    gif{
-      max-width:90vw;
+    img{
+      max-height:130vh;
+      margin-left: 15vw;
+      z-index:-1;
+      position:fixed;
     }
     p{
       max-width: 60vw;
-      margin-top: 88vh;
+      margin-top: 90vh;
       margin-left: 5%;
+      z-index:10;
+      position:absolute;
     }
 </style>
   </head>
   <body>
-    <gif src="counterspace.gif">
+    <img src="counterspace.gif">
     <p>Counterspace Study—020519</p>
   </body>
   </html>
