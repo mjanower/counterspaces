@@ -44,6 +44,7 @@
       top: 0%;
       margin-bottom: 2vh;
       margin-left: 5%;
+        transition:fade-in-out
     }
     a{
       color:white;
@@ -55,7 +56,7 @@
       text-wrap:nowrap;
       transform:rotate(90deg);
       right:-21vh;
-      bottom:4vh;
+      bottom:0vh;
         z-index:10;
     }
     #side p{
@@ -73,46 +74,15 @@
     #loader p{
         margin-left:5%;
         margin-top:5%;
+        animation: blink 1s linear infinite;
     }
     .no-js #loader { display: none;  }
 		.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-    .blink {
-      	-webkit-animation: blink .75s linear infinite;
-      	-moz-animation: blink .75s linear infinite;
-      	-ms-animation: blink .75s linear infinite;
-      	-o-animation: blink .75s linear infinite;
-      	 animation: blink .75s linear infinite;
-      }
-      @-webkit-keyframes blink {
-      	0% { opacity: 1; }
-      	50% { opacity: 1; }
-      	50.01% { opacity: 0; }
-      	100% { opacity: 0; }
-      }
-      @-moz-keyframes blink {
-      	0% { opacity: 1; }
-      	50% { opacity: 1; }
-      	50.01% { opacity: 0; }
-      	100% { opacity: 0; }
-      }
-      @-ms-keyframes blink {
-      	0% { opacity: 1; }
-      	50% { opacity: 1; }
-      	50.01% { opacity: 0; }
-      	100% { opacity: 0; }
-      }
-      @-o-keyframes blink {
-      	0% { opacity: 1; }
-      	50% { opacity: 1; }
-      	50.01% { opacity: 0; }
-      	100% { opacity: 0; }
-      }
-      @keyframes blink {
-      	0% { opacity: 1; }
-      	50% { opacity: 1; }
-      	50.01% { opacity: 0; }
-      	100% { opacity: 0; }
-      }
+    @keyframes blink{
+        0%{opacity: 0;}
+        50%{opacity: .5;}
+        100%{opacity: 1;}
+    }   
 </style>
   </head>
   <body>
