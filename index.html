@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
-       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <link rel="stylesheet" type="text/css" href="gifplayer.css">
       <script type="text/javascript" src="jquery.gifplayer.js"></script>
     <script type="text/javascript">
       $('.gif').gifplayer();
-      </script>
-      
+      </script>    
 <style>
     @font-face{
           font-family: myFirstFont;
@@ -68,6 +67,48 @@
         top:0;
         left:0;
     }
+    #loading_wrap p{
+        margin-top:90vh;
+        margin-left:2.5vh;
+        text-decoration:blink;
+    }
+                .blink {
+      	-webkit-animation: blink .75s linear infinite;
+      	-moz-animation: blink .75s linear infinite;
+      	-ms-animation: blink .75s linear infinite;
+      	-o-animation: blink .75s linear infinite;
+      	 animation: blink .75s linear infinite;
+      }
+      @-webkit-keyframes blink {
+      	0% { opacity: 1; }
+      	50% { opacity: 1; }
+      	50.01% { opacity: 0; }
+      	100% { opacity: 0; }
+      }
+      @-moz-keyframes blink {
+      	0% { opacity: 1; }
+      	50% { opacity: 1; }
+      	50.01% { opacity: 0; }
+      	100% { opacity: 0; }
+      }
+      @-ms-keyframes blink {
+      	0% { opacity: 1; }
+      	50% { opacity: 1; }
+      	50.01% { opacity: 0; }
+      	100% { opacity: 0; }
+      }
+      @-o-keyframes blink {
+      	0% { opacity: 1; }
+      	50% { opacity: 1; }
+      	50.01% { opacity: 0; }
+      	100% { opacity: 0; }
+      }
+      @keyframes blink {
+      	0% { opacity: 1; }
+      	50% { opacity: 1; }
+      	50.01% { opacity: 0; }
+      	100% { opacity: 0; }
+      }
 </style>
   </head>
   <body>
@@ -75,7 +116,7 @@
     <div id="side"><p>mikkijanower.work</p>
     </div>
         <img class="gif" data-wait="true" src="medley.gif">
-    <div id='loading_wrap'>Calibrating counterspaces...</div>
+      <div id='loading_wrap'><p>Calibrating counterspaces...</p></div>
   </body>
     <script type="text/javascript">$('#loading_wrap').remove();</script>
   </html>
