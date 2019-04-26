@@ -37,14 +37,13 @@
     max-height:100vh;
     align-content:center;
     left:-5%;
-    z-index:-1;
     }
     #study{
-      position:absolute;
-      top: 0%;
-      margin-bottom: 2vh;
-      margin-left: 5%;
-        transition:fade-in-out
+    position:relative;
+    top: 0%;
+    margin-left: 5%;
+    display:all;
+    
     }
     a{
       color:white;
@@ -56,7 +55,7 @@
       text-wrap:nowrap;
       transform:rotate(90deg);
       right:-21vh;
-      bottom:0vh;
+      bottom:-2vh;
         z-index:10;
     }
     #side p{
@@ -83,6 +82,52 @@
         50%{opacity: .5;}
         100%{opacity: 1;}
     }   
+        @keyframes fadeIn{
+      0% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+
+    @-moz-keyframes fadeIn {
+      0% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+
+    @-webkit-keyframes fadeIn {
+      0% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+
+    @-o-keyframes fadeIn {
+      0% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+
+    @-ms-keyframes fadeIn {
+      0% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+
+
 </style>
   </head>
   <body>
@@ -93,8 +138,9 @@
       <div id='loader'><p>Calibrating counterspaces...</p></div>
          <script>
     $(window).on('load',function() {
-      $('#loader').remove();
-    })
+      $('#loader').fadeOut( "slow", function() {
+    });
+});
   </script>	
   </body>
   </html>
