@@ -2,7 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" width=devide-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="gifplayer.css">
+      <script type="text/javascript" src="jquery.gifplayer.js"></script>
+    <script type="text/javascript">
+      $('.gif').gifplayer();
+      </script>
+      
 <style>
     @font-face{
           font-family: myFirstFont;
@@ -14,18 +21,23 @@
     }
     body{
         font-family:myFirstFont;
-        font-size: 3vh;
+        font-size: 2.5vh;
         line-height: 4.5vh;
+        width:100vw;
+        height:100vh;
         overflow:hidden;
     }
+    .image-gallery{
+    position:absolute;
+    z-index:-1;
+    top:2%;
+    }
     img{
-      height:100vh;
-      left: -4rem;
-      z-index:-1;
-      position:absolute;
-      top: 50%;
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+    position:fixed;
+    max-height:100vh;
+    align-content:center;
+    left:-5%;
+        z-index:-1;
     }
     #study{
       position:absolute;
@@ -33,37 +45,37 @@
       margin-bottom: 2vh;
       margin-left: 5%;
     }
-    #scroll{
-      position:relative;
-      top: 2.5rem;
-      margin-left:5%;
-      font-size: 5vh;
-    }
     a{
       color:white;
       text-decoration:none;
     }
     #side{
+      position:absolute;
       display:flex;
       text-wrap:nowrap;
-      position:absolute;
       transform:rotate(90deg);
-      left:18%;
-      bottom:22vh;
+      right:-21vh;
+      bottom:4vh;
     }
     #side p{
       padding-right:28vh;
+    }
+    #loading_wrap{
+        position:fixed;
+        height:100%;
+        width:100%;
+        overflow:hidden;
+        top:0;
+        left:0;
     }
 </style>
   </head>
   <body>
     <p id="study">Counterspace Study</p>
-    <p id="scroll"> SCROLL RIGHT>></p>
-    <div id="side"><p>mikkijanower.work</p><p>020519</p>
+    <div id="side"><p>mikkijanower.work</p>
     </div>
-    <div class="image-gallery">
-      <div class="image"><img src="s.gif"></div>
-      <div class="image"><img src="a.gif"></div>
-      <!-- <div class="image"><img src="b.gif"></div> -->
+        <img class="gif" data-wait="true" src="medley.gif">
+    <div id='loading_wrap'>Calibrating counterspaces...</div>
   </body>
+    <script type="text/javascript">$('#loading_wrap').remove();</script>
   </html>
